@@ -27,7 +27,7 @@ const Header = () => {
     <a className="w-[100px] h-[100px]"><img src={navImg} alt="" /></a>
   </div>
     <div className="navbar-end lg:flex gap-10">
-      <ul className="menu menu-horizontal px-1 lg:flex gap-5 text-lg text-gray-500">
+      <ul className="hidden md:visible menu menu-horizontal px-1 lg:flex gap-5 text-lg text-gray-500">
       <li><a>Home</a></li>
       <li><a>Fixture</a></li>
       <li><a>Teams</a></li>
@@ -45,7 +45,7 @@ const Header = () => {
         }}>
           <div className='text-white flex flex-col items-center justify-center p-16 '>
             <img className='' src={bannerMain} alt="" />
-            <h1 className='text-4xl font-bold p-5'>Assemble Your Ultimate Dream 11 Cricket Team</h1>
+            <h1 className='text-xl md:text-4xl font-bold p-5'>Assemble Your Ultimate Dream 11 Cricket Team</h1>
             <p className='text-xl text-[#ffffff90]'>Beyond Boundaries Beyond Limits</p>
             <button className='border border-[#E7FE29] p-3 rounded-lg mt-5'><span className='bg-[#E7FE29]  text-black font-bold py-2 px-3 rounded-lg'>Claim Free Credit</span></button>
         </div>

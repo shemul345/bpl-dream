@@ -17,7 +17,7 @@ function App() {
     <>
       <Header></Header>
 
-      <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+      <Suspense fallback={<p className='mt-5 ml-32 text-xl font-semibold'>Players are coming soon <span className="loading loading-dots loading-xl"></span></p>}>
         <AvailablePlayers playerPromise={playerPromise}></AvailablePlayers>
       </Suspense>
     </>
