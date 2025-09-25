@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import userImg from '../../assets/user.png';
 import flagImg from '../../assets/flag.png';
 
-const Player = ({ player }) => {
-    console.log(player);
+const Player = ({ player, setAvailableBalance,availableBalance}) => {
+    const [isSelected, setIsSelected] = useState(false);
+
     return (
             <div>
             <div className="card bg-base-100 shadow-xl p-4">
@@ -34,7 +35,14 @@ const Player = ({ player }) => {
     
                     <div className="card-actions flex justify-between items-center mt-4">
                         <p className='font-semibold'>Price: $<span>{player.price}</span></p>
-                    <button className="btn">Choose Player</button>
+                        <button disabled={isSelected} onClick={() => {
+                            if (availableBalance < player.price) {
+                                alert('You have no enough balance')
+                                return;
+                            }
+                            setIsSelected(true)
+                            setAvailableBalance(availableBalance-player.price)
+                        }} className="btn">{isSelected===true?"Selected":"Choose Player"}</button>
     </div>
   </div>
 </div>

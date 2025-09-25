@@ -3,7 +3,7 @@ import navImg from '../../assets/logo.png';
 import bannerMain from '../../assets/banner-main.png';
 import bannerBg from '../../assets/banner-bg.png';
 
-const Header = () => {
+const Header = ({availableBalance}) => {
     return (
         <div>
             {/* header section start */}
@@ -33,7 +33,7 @@ const Header = () => {
       <li><a>Teams</a></li>
       <li><a>Schedules</a></li>
     </ul>
-    <a className="text-lg">$<span>160000000</span></a>
+              <a className="text-lg">$<span>{availableBalance}</span></a>
   </div>
         </div>
         {/* navbar end */}
