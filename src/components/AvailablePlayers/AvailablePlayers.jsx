@@ -2,7 +2,7 @@ import React, { use } from 'react';
 import Player from '../Player/Player';
 
 
-const AvailablePlayers = ({playerPromise,setAvailableBalance,availableBalance}) => {
+const AvailablePlayers = ({playerPromise,setAvailableBalance,availableBalance,purchasedPlayers,setPurchasedPlayers}) => {
     const playersData = use(playerPromise);
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 justify-around max-w-5/6 mx-auto '>
@@ -11,6 +11,8 @@ const AvailablePlayers = ({playerPromise,setAvailableBalance,availableBalance}) 
                     setAvailableBalance={setAvailableBalance}
                     availableBalance={availableBalance}
                     key={player.id}
+                    purchasedPlayers={purchasedPlayers}
+                    setPurchasedPlayers={setPurchasedPlayers}
                     player={player}></Player>)
             }
             
