@@ -3,6 +3,7 @@ import navImg from '../../assets/logo.png';
 import bannerMain from '../../assets/banner-main.png';
 import bannerBg from '../../assets/banner-bg.png';
 
+
 const Header = ({availableBalance}) => {
     return (
         <div>
@@ -41,7 +42,7 @@ const Header = ({availableBalance}) => {
         <section className='rounded-2xl' style={{
           backgroundImage: `url(${bannerBg})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center"
         }}>
           <div className='text-white flex flex-col items-center justify-center p-16 '>
             <img className='' src={bannerMain} alt="" />
